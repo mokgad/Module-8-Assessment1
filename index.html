@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=devicewidth, initial-scale=1">
+
+        <title>LOGIN PAGE</title>
+
+        <style>
+body{     
+    font-family: calibri,helvetica,sans-serif;
+    background-color: pink;
+}
+
+button{
+    background-color: #4CAF50;
+    width: 100%;
+    color: orange;
+    padding: 15px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+form{
+    border: 3px solid #f1f1f1;
+}
+
+input[type=username], input[type=password]{
+     width: 100%;
+     margin: 8px 0;
+     padding: 12px 20px;
+     display: inline-block;
+     border: 2px solid green;
+     box-sizing: border-box;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+.cancelbtn{
+    width: auto;
+    padding: 10px 18px;
+    margin: 10px 5px;
+}
+
+container{
+    padding: 25px;
+    background-color: lightblue;
+}
+
+        </style>
+    </head>
+    <body>
+        <center><h1>LOGIN FORM</h1></center>
+        <form>
+            
+            <div class="container">
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" name="Mokgadi" required>
+
+                <div class="container">
+                <label>Password</label>
+                <input type="text" placeholder="Enter password" password="1234" required>
+
+                <button type="submit">Login</button>
+
+                <input type="checkbox" checked="checked">Remember me 
+                <button type="button" class="cancelbtn">Cancel</button>
+                forgot<a href="#">Password?</a>
+            
+
+            </div>
+        </form>
+
+        <script>
+            function verifyUser(){
+                var username= document.getElementById("usernameinput").value;
+                var password= document.getElementById("passwordiput").value;
+
+                checkUserCreds(username, password);
+            }
+
+            function checkUserCreds(username, password){
+                var systemusername="Mokgadi";
+                var systempassword="1234";
+
+                if(username == systemusername && password == systempassword) {
+                    document.getElementById("message").innerHTML = "Correct. Logging You In....";
+                } else{
+                    document.getElementById("message").innerHTML = "Username or Password are incorrect";
+
+                }
+            }
+        </script>
+    </body>
+</html>
